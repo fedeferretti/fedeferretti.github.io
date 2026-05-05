@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Federica Ferretti</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <header>
+    <div class="header-bar">
+      <a href="index.html" class="header-home">Federica Ferretti</a>
+      <nav>
+        <a href="index.html" aria-current="page">About</a>
+        <a href="research.html">Research</a>
+        <a href="publications.html">Publications</a>
+        <a href="cv.html">CV</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section id="about">
+      <div class="about-intro">
+        <div class="about-photo-col">
+          <img src="assets/federica_ferretti.JPG" alt="Federica Ferretti" class="profile-photo">
+          <div class="social-icons">
+            <a href="mailto:f.federicaferretti@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+            <a href="https://scholar.google.com/citations?hl=en&user=BEPgyq4AAAAJ" target="_blank" rel="noopener" title="Google Scholar"><i class="fa-brands fa-google-scholar"></i></a>
+            <a href="https://www.linkedin.com/in/federica-ferretti-b2266422a/" target="_blank" rel="noopener" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/baby-ff" target="_blank" rel="noopener" title="GitHub"><i class="fa-brands fa-github"></i></a>
+          </div>
+        </div>
+        <div class="about-text">
+          <p>
+            I am a Post-doctoral Fellow at the NSF-Simons <a href="https://www.nitmb.org" target="_blank" rel="noopener">National Institute for Theory and Mathematics in Biology</a> of Chicago. My interests sit at the interface of statistical physics and biology: using a combination of analytical and theoretical approaches, I develop theoretical models and data-analysis methods to understand how functional properties emerge in biological systems.
+          </p>
+          <p>
+            I am currently working on population dynamics problems inspired by affinity maturation and protein evolution with Arvind Murugan and Rama Ranganathan at UChicago.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="news">
+      <h2>News</h2>
+      <div class="news-slider">
+        <button class="news-arrow news-prev" aria-label="Previous">&#8592;</button>
+        <div class="news-slides">
+          <div class="news-slide">
+            <span class="news-month">May 2026</span>
+            <p>I am organizing a workshop at the NITMB this fall (Sep 14–19) on <a href="https://www.nitmb.org/biological-functionin-space-and-time-workshop" target="_blank" rel="noopener">Biological Function in Space and Time</a>. Applications are open!</p>
+          </div>
+        </div>
+        <button class="news-arrow news-next" aria-label="Next">&#8594;</button>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Federica Ferretti</p>
+  </footer>
+
+<script>
+  const slides = document.querySelectorAll('.news-slide');
+  let current = 0;
+  function show(n) {
+    slides[current].classList.remove('active');
+    current = (n + slides.length) % slides.length;
+    slides[current].classList.add('active');
+  }
+  slides[0].classList.add('active');
+  document.querySelector('.news-prev').addEventListener('click', () => show(current - 1));
+  document.querySelector('.news-next').addEventListener('click', () => show(current + 1));
+</script>
+</body>
+</html>
