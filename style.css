@@ -373,7 +373,7 @@ footer p {
 
 /* ── Small screen adjustments ── */
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
   header h1 {
     font-size: 1.4rem;
   }
@@ -399,7 +399,7 @@ footer p {
   }
 
   .research-img {
-    width: 100%;
+    width: 100% !important;
     max-width: 300px;
   }
 }
